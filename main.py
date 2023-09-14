@@ -14,10 +14,16 @@ print("Battery:", tello.get_battery(), "%")
 tello.takeoff()
 
 # Fly forward for 100 cm
-tello.move_forward(10)
+tello.move_forward(100)
+time.sleep(1)
 
-# Turn clockwise by 90 degrees
-tello.rotate_clockwise(90)
+tello.move_down(20)
+
+tello.move_left(20)
+
+tello.move_right(40)
+
+tello.move_back(100)
 
 # Land
 tello.land()
